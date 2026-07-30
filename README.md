@@ -33,8 +33,13 @@ L’ancienne version reste temporairement publiée depuis la branche `gh-pages`.
 - tag de référence : `portfolio-v1-final` ;
 - branche de publication historique : `gh-pages`.
 
-## État du projet
+## Prérequis
 
-Le dépôt se trouve actuellement dans la phase de préparation de la refonte.
+- Node.js 22 ou une version LTS plus récente ;
+- npm 11.
 
-Les commandes d’installation, de développement, de test et de build seront ajoutées lors de l’initialisation de Next.js.
+## Installation
+
+```bash
+npm ci
+```
