@@ -1,0 +1,40 @@
+# Dependencies
+node_modules/
+
+# Next.js
+.next/
+out/
+
+# Build and tests
+coverage/
+playwright-report/
+test-results/
+*.tsbuildinfo
+next-env.d.ts
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+!.env.example
+
+# Vercel
+.vercel/
+
+# Logs
+npm-debug.log*
+
+# Local certificates and private keys
+*.pem
+
+# Operating systems
+.DS_Store
+Thumbs.db
+
+# Development environments
+.idea/
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
