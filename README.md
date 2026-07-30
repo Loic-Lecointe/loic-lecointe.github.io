@@ -35,8 +35,10 @@ L’ancienne version reste temporairement publiée depuis la branche `gh-pages`.
 
 ## Prérequis
 
-- Node.js 22 ou une version LTS plus récente ;
+- Node.js 24 LTS recommandé ;
+- Node.js 22.18 ou plus récent temporairement compatible ;
 - npm 11.
+  La version Node.js utilisée par la CI est indiquée dans le fichier `.nvmrc`.
 
 ## Installation
 
