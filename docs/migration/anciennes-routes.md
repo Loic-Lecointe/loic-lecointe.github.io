@@ -4,26 +4,26 @@ Ce document répertorie les URLs publiques de l’ancien portfolio qui devront �
 
 ## Page d’accueil et ancres
 
-| Ancienne route | Destination envisagée | Statut |
-|---|---|---|
-| `/` | `/` | À conserver |
-| `/#home` | `/#accueil` | À confirmer |
-| `/#about` | `/#a-propos` | À confirmer |
-| `/#training` | `/#formation` | À confirmer |
-| `/#skills` | `/#competences` | À confirmer |
-| `/#Experiences` | `/#experience` | À confirmer |
-| `/#Projects` | `/projets` | À confirmer |
-| `/#contact` | `/#contact` | À conserver |
+| Ancienne route  | Destination envisagée | Statut      |
+| --------------- | --------------------- | ----------- |
+| `/`             | `/`                   | À conserver |
+| `/#home`        | `/#accueil`           | À confirmer |
+| `/#about`       | `/#a-propos`          | À confirmer |
+| `/#training`    | `/#formation`         | À confirmer |
+| `/#skills`      | `/#competences`       | À confirmer |
+| `/#Experiences` | `/#experience`        | À confirmer |
+| `/#Projects`    | `/projets`            | À confirmer |
+| `/#contact`     | `/#contact`           | À conserver |
 
 ## Anciennes pages de projet
 
-| Ancienne route | Destination envisagée | Statut |
-|---|---|---|
-| `/pages/CV_Numérique.html` | Projet ou archive du portfolio initial | À décider |
-| `/pages/MakerChallenge.html` | Projet ou archive Maker Challenge | À décider |
-| `/pages/CookingPapa.html` | `/projets/cooking-papa` | Prévu |
-| `/pages/Covoiturage.html` | `/projets/archives/site-covoiturage` | Prévu |
-| `/pages/Rockn_Code.html` | `/projets/archives/rockn-code` | Prévu |
+| Ancienne route               | Destination envisagée                  | Statut    |
+| ---------------------------- | -------------------------------------- | --------- |
+| `/pages/CV_Numérique.html`   | Projet ou archive du portfolio initial | À décider |
+| `/pages/MakerChallenge.html` | Projet ou archive Maker Challenge      | À décider |
+| `/pages/CookingPapa.html`    | `/projets/cooking-papa`                | Prévu     |
+| `/pages/Covoiturage.html`    | `/projets/archives/site-covoiturage`   | Prévu     |
+| `/pages/Rockn_Code.html`     | `/projets/archives/rockn-code`         | Prévu     |
 
 ## Liens externes historiques
 
