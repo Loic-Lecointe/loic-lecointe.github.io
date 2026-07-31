@@ -21,6 +21,16 @@ La nouvelle version du portfolio sera déployée sur Vercel.
 
 Le dépôt GitHub `loic-lecointe.github.io` et son historique seront conservés.
 
+## Mise en œuvre
+
+Le projet Vercel a été créé le 30 juillet 2026.
+
+L’URL de production initiale est :
+
+```text
+https://loic-lecointe-portfolio.vercel.app
+```
+
 ## Conséquences positives
 
 - utilisation complète des fonctionnalités de Next.js ;
