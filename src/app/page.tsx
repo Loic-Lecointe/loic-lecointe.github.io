@@ -1,13 +1,7 @@
 import { HeroSection } from "@/components/home/hero-section";
+import { ProjectsSection } from "@/components/home/projects-section";
 
 const portfolioSections = [
-  {
-    id: "projets",
-    eyebrow: "Projets",
-    title: "Des réalisations expliquées comme de véritables études de cas.",
-    description:
-      "Cette section présentera le contexte, les choix techniques, les difficultés, les résultats et les enseignements de chaque projet.",
-  },
   {
     id: "experience",
     eyebrow: "Expérience",
@@ -49,7 +43,7 @@ export default function Home() {
   return (
     <>
       <HeroSection />
-
+      <ProjectsSection />
       {portfolioSections.map((section, index) => (
         <section
           key={section.id}
@@ -60,7 +54,7 @@ export default function Home() {
           <div className="mx-auto grid max-w-6xl gap-8 px-4 py-20 sm:px-6 md:grid-cols-[12rem_1fr] lg:px-8 lg:py-28">
             <div>
               <p className="font-mono text-sm font-medium text-primary">
-                {String(index + 1).padStart(2, "0")} · {section.eyebrow}
+                {String(index + 2).padStart(2, "0")} · {section.eyebrow}
               </p>
             </div>
 
