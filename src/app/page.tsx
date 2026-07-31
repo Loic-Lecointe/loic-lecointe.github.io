@@ -1,3 +1,5 @@
+import { HeroSection } from "@/components/home/hero-section";
+
 const portfolioSections = [
   {
     id: "projets",
@@ -46,53 +48,7 @@ const portfolioSections = [
 export default function Home() {
   return (
     <>
-      <section
-        id="accueil"
-        aria-labelledby="hero-title"
-        className="relative scroll-mt-20 overflow-hidden border-b border-border"
-      >
-        <div
-          aria-hidden="true"
-          className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top_right,color-mix(in_oklab,var(--primary)_18%,transparent),transparent_42%)]"
-        />
-
-        <div className="mx-auto flex min-h-[calc(100svh-4rem)] max-w-6xl items-center px-4 py-20 sm:px-6 lg:px-8">
-          <div className="max-w-4xl">
-            <p className="mb-6 font-mono text-sm font-medium tracking-[0.12em] text-primary uppercase">
-              Développeur full-stack · R&D
-            </p>
-
-            <h1
-              id="hero-title"
-              className="text-4xl leading-tight font-semibold tracking-tight text-balance sm:text-6xl lg:text-7xl"
-            >
-              Je conçois des applications web et des logiciels métier robustes.
-            </h1>
-
-            <p className="mt-8 max-w-2xl text-lg leading-8 text-muted-foreground">
-              De l’analyse fonctionnelle au déploiement, je transforme des
-              besoins concrets en solutions maintenables, testées et adaptées à
-              leur environnement.
-            </p>
-
-            <div className="mt-10 flex flex-col gap-3 sm:flex-row">
-              <a
-                href="#projets"
-                className="inline-flex min-h-11 items-center justify-center bg-primary px-5 text-sm font-medium text-primary-foreground transition-transform hover:-translate-y-0.5 focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background focus-visible:outline-none"
-              >
-                Découvrir mes projets
-              </a>
-
-              <a
-                href="#contact"
-                className="inline-flex min-h-11 items-center justify-center border border-border bg-background px-5 text-sm font-medium text-foreground transition-colors hover:bg-muted focus-visible:ring-2 focus-visible:ring-ring/50 focus-visible:outline-none"
-              >
-                Me contacter
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
+      <HeroSection />
 
       {portfolioSections.map((section, index) => (
         <section
