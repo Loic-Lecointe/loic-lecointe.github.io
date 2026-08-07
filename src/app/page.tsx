@@ -1,3 +1,4 @@
+import { AboutSection } from "@/components/home/about-section";
 import { EducationSection } from "@/components/home/education-section";
 import { ExperienceSection } from "@/components/home/experience-section";
 import { HeroSection } from "@/components/home/hero-section";
@@ -5,13 +6,6 @@ import { ProjectsSection } from "@/components/home/projects-section";
 import { SkillsSection } from "@/components/home/skills-section";
 
 const portfolioSections = [
-  {
-    id: "a-propos",
-    eyebrow: "À propos",
-    title: "Un développeur polyvalent, autonome et curieux.",
-    description:
-      "Cette section apportera quelques éléments personnels sans détourner l’attention de mon parcours professionnel.",
-  },
   {
     id: "contact",
     eyebrow: "Contact",
@@ -29,6 +23,7 @@ export default function Home() {
       <ExperienceSection />
       <SkillsSection />
       <EducationSection />
+      <AboutSection />
       {portfolioSections.map((section, index) => (
         <section
           key={section.id}
@@ -39,7 +34,7 @@ export default function Home() {
           <div className="mx-auto grid max-w-6xl gap-8 px-4 py-20 sm:px-6 md:grid-cols-[12rem_1fr] lg:px-8 lg:py-28">
             <div>
               <p className="font-mono text-sm font-medium text-primary">
-                {String(index + 5).padStart(2, "0")} · {section.eyebrow}
+                {String(index + 6).padStart(2, "0")} · {section.eyebrow}
               </p>
             </div>
 
