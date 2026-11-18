@@ -9,7 +9,7 @@ export function SiteFooter() {
         <p>
           © {currentYear} {profileConfig.name}
         </p>
-        <p>Conçu et développé avec Next.js, Three.js et GSAP.</p>
+        <p>Conçu et développé avec Next.js, Tailwind CSS et GSAP.</p>
       </div>
     </footer>
   );

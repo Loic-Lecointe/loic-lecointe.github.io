@@ -5,7 +5,6 @@ import {
   LinkedinLogoIcon,
 } from "@phosphor-icons/react/ssr";
 
-import { HeroPrintScene } from "@/components/home/hero-print-scene";
 import { profileConfig } from "@/config/profile";
 
 const reveal =
@@ -119,21 +118,24 @@ export function HeroSection() {
           className={`${reveal} mx-auto w-full max-w-md lg:max-w-none`}
         >
           <figure className="overflow-hidden rounded-xl border border-border bg-card shadow-2xl shadow-black/20">
-            <div className="relative">
-              <Image
-                src="/loic-lecointe.jpg"
-                alt="Portrait de Loïc Lecointe, souriant, dans un atelier"
-                width={1077}
-                height={808}
-                priority
-                sizes="(min-width: 1024px) 28rem, 100vw"
-                className="aspect-[4/4.4] w-full object-cover object-[28%_20%]"
-              />
+            {/* Le portrait « s’imprime » couche par couche, de bas en haut. */}
+            <div className="relative overflow-hidden bg-blueprint">
+              <div className="portrait-print">
+                <Image
+                  src="/loic-lecointe.jpg"
+                  alt="Portrait de Loïc Lecointe, souriant, dans un atelier"
+                  width={1077}
+                  height={808}
+                  priority
+                  sizes="(min-width: 1024px) 28rem, 100vw"
+                  className="portrait-print-image aspect-[4/4.4] w-full object-cover object-[28%_20%]"
+                />
+              </div>
               <div
                 aria-hidden="true"
-                className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-card via-card/40 to-transparent"
+                className="absolute inset-x-0 bottom-0 h-1/4 bg-gradient-to-t from-card/80 to-transparent"
               />
-              <HeroPrintScene className="pointer-events-none absolute right-3 bottom-3 h-56 w-40 sm:h-64 sm:w-48" />
+              <div aria-hidden="true" className="portrait-print-head" />
             </div>
 
             <dl className="grid grid-cols-3 divide-x divide-border border-t border-border">
@@ -142,7 +144,7 @@ export function HeroSection() {
                   <dt className="text-xs leading-5 text-muted-foreground">
                     {fact.label}
                   </dt>
-                  <dd className="order-first font-display text-lg leading-tight font-semibold [font-stretch:115%]">
+                  <dd className="order-first font-display text-base leading-tight font-semibold whitespace-nowrap [font-stretch:115%] xl:text-lg">
                     {fact.value}
                   </dd>
                 </div>
