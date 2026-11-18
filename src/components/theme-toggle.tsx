@@ -20,7 +20,7 @@ export function ThemeToggle() {
         render={
           <Button
             aria-label="Choisir le thème d’affichage"
-            className="relative"
+            className="relative size-9 rounded-md"
             size="icon"
             variant="outline"
           />

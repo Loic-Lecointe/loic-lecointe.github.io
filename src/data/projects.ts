@@ -2,13 +2,38 @@ import type { Project } from "@/types/project";
 
 export const featuredProjects = [
   {
+    slug: "suivi-qualite-rivets",
+    title: "Suivi qualité des rivets en temps réel",
+    context: "Professionnel",
+    category: "Logiciel industriel",
+    summary:
+      "Une application desktop qui enregistre et contrôle la qualité de chaque rivet posé en production, avec gestion des comptes utilisateurs et des licences.",
+    challenge:
+      "Afficher des mesures en temps réel sans bloquer l’interface, et garder un historique exploitable par le service qualité.",
+    outcome:
+      "Réalisée pendant mon alternance, de l’analyse du besoin à la mise en service.",
+    technologies: ["C# / .NET", "WPF", "MVVM", "SQL"],
+  },
+  {
+    slug: "site-vitrine-3d",
+    title: "Site vitrine animé en 3D",
+    context: "Professionnel",
+    category: "Web et animation",
+    summary:
+      "Un site de présentation en Next.js dont les animations 3D et les transitions suivent le scroll.",
+    challenge:
+      "Rendre des scènes WebGL fluides sur mobile tout en gardant un bon référencement.",
+    technologies: ["Next.js", "React", "Tailwind CSS", "Three.js", "GSAP"],
+  },
+  {
     slug: "rimcolony-manager",
     title: "RimColony Manager",
-    category: "Application web full-stack",
+    context: "Personnel",
+    category: "Application full stack",
     summary:
-      "Une application de gestion de colonies RimWorld permettant de centraliser les colons, leurs compétences et leurs priorités de travail.",
+      "Une application pour gérer les colons d’une partie de RimWorld : compétences, priorités de travail et affectations.",
     challenge:
-      "Structurer des données métier liées entre elles tout en conservant une interface utilisable et une base technique testable.",
+      "Modéliser des données très liées entre elles et garder une interface rapide à utiliser.",
     technologies: [
       "Next.js",
       "TypeScript",
@@ -20,28 +45,13 @@ export const featuredProjects = [
   },
   {
     slug: "palletisation-apprentissage-renforcement",
-    title: "Optimisation de palettisation par apprentissage par renforcement",
+    title: "Palettisation par apprentissage par renforcement",
+    context: "Personnel",
     category: "Intelligence artificielle",
     summary:
-      "Un environnement en deux dimensions entraînant un agent à placer des colis sur une palette de manière compacte et régulière.",
+      "Un agent entraîné à placer des colis sur une palette de façon compacte et stable.",
     challenge:
-      "Concevoir l’environnement, la fonction de récompense et les métriques permettant d’évaluer la qualité des placements.",
+      "Concevoir l’environnement, la fonction de récompense et les métriques de qualité du placement.",
     technologies: ["Python", "Gymnasium", "Stable-Baselines3", "PPO"],
-  },
-  {
-    slug: "portfolio-professionnel",
-    title: "Portfolio professionnel",
-    category: "Architecture et qualité web",
-    summary:
-      "La refonte complète d’un ancien portfolio statique vers une application Next.js accessible, testable et déployée en continu.",
-    challenge:
-      "Faire évoluer le projet par lots vérifiables, avec des décisions documentées, des contrôles automatisés et des déploiements de prévisualisation.",
-    technologies: [
-      "Next.js",
-      "TypeScript",
-      "Tailwind CSS",
-      "GitHub Actions",
-      "Vercel",
-    ],
   },
 ] satisfies readonly Project[];

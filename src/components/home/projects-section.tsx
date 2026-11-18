@@ -1,4 +1,5 @@
 import { ProjectCard } from "@/components/home/project-card";
+import { SectionHeading } from "@/components/home/section-heading";
 import { featuredProjects } from "@/data/projects";
 
 export function ProjectsSection() {
@@ -6,40 +7,22 @@ export function ProjectsSection() {
     <section
       id="projets"
       aria-labelledby="projects-title"
-      className="scroll-mt-20 border-b border-border"
+      className="scroll-mt-16 border-b border-border bg-card/40"
     >
-      <div className="mx-auto grid max-w-6xl gap-8 px-4 py-20 sm:px-6 md:grid-cols-[12rem_1fr] lg:px-8 lg:py-28">
-        <div>
-          <p className="font-mono text-sm font-medium text-primary">
-            01 · Projets
-          </p>
-        </div>
+      <div className="mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
+        <SectionHeading id="projects-title" title="Projets choisis">
+          Deux réalisations professionnelles, présentées sans données
+          confidentielles, et deux projets personnels qui montrent ce que
+          j’explore en dehors du travail.
+        </SectionHeading>
 
-        <div>
-          <div className="max-w-3xl">
-            <h2
-              id="projects-title"
-              className="text-3xl leading-tight font-semibold tracking-tight text-balance sm:text-4xl"
-            >
-              Des réalisations expliquées comme de véritables études de cas.
-            </h2>
-
-            <p className="mt-5 text-base leading-7 text-muted-foreground sm:text-lg">
-              Cette sélection illustre différentes facettes de mon
-              parcours&nbsp;: développement full-stack, expérimentation en
-              intelligence artificielle et mise en place d’une architecture web
-              professionnelle.
-            </p>
-          </div>
-
-          <ul className="mt-12 grid gap-5 lg:grid-cols-3">
-            {featuredProjects.map((project, index) => (
-              <li key={project.slug} className="h-full">
-                <ProjectCard project={project} position={index + 1} />
-              </li>
-            ))}
-          </ul>
-        </div>
+        <ul className="mt-10 divide-y divide-border border-y border-border">
+          {featuredProjects.map((project) => (
+            <li key={project.slug}>
+              <ProjectCard project={project} />
+            </li>
+          ))}
+        </ul>
       </div>
     </section>
   );

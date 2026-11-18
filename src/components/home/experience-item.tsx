@@ -1,84 +1,57 @@
+import { TechList } from "@/components/home/tech-list";
 import type { Experience } from "@/types/experience";
 
 type ExperienceItemProps = {
   experience: Experience;
-  position: number;
 };
 
-export function ExperienceItem({ experience, position }: ExperienceItemProps) {
+export function ExperienceItem({ experience }: ExperienceItemProps) {
   return (
-    <article className="grid gap-6 border-t border-border py-10 first:border-t-0 first:pt-0 md:grid-cols-[9rem_1fr]">
-      <div>
-        <p className="font-mono text-xs font-medium text-primary">
-          {String(position).padStart(2, "0")}
-        </p>
+    <article className="relative pb-14 pl-9">
+      <span
+        aria-hidden="true"
+        data-timeline-node
+        className="absolute top-1.5 left-0 size-[11px] rounded-full border-2 border-border bg-background transition-colors duration-300 [&.is-active]:border-primary [&.is-active]:bg-primary"
+      />
 
-        <p className="mt-2 text-sm text-muted-foreground">
-          {experience.period}
-        </p>
+      <p className="text-sm text-muted-foreground">
+        <time>{experience.period}</time>
+        <span className="ml-3 text-foreground/70">{experience.duration}</span>
+      </p>
+
+      <div className="mt-3 flex flex-wrap items-baseline gap-x-3 gap-y-2">
+        <h3 className="text-2xl leading-tight font-semibold sm:text-3xl">
+          {experience.role}
+        </h3>
+        <span className="rounded-sm border border-primary/40 px-2 py-0.5 text-xs font-medium text-primary">
+          {experience.contract}
+        </span>
       </div>
+      <p className="mt-1 text-base font-medium text-foreground/80">
+        {experience.company}
+      </p>
 
-      <div>
-        <div className="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between sm:gap-6">
-          <div>
-            <h3 className="text-2xl leading-tight font-semibold tracking-tight">
-              {experience.role}
-            </h3>
+      <p className="mt-5 max-w-2xl text-base leading-7 text-muted-foreground">
+        {experience.summary}
+      </p>
 
-            <p className="mt-2 text-sm font-medium text-primary">
-              {experience.company}
-            </p>
-          </div>
-
-          {experience.confidential ? (
-            <p className="w-fit border border-border bg-muted/40 px-2.5 py-1 font-mono text-xs text-muted-foreground">
-              Contexte confidentiel
-            </p>
-          ) : null}
-        </div>
-
-        <p className="mt-6 max-w-3xl text-base leading-7 text-muted-foreground">
-          {experience.summary}
-        </p>
-
-        <div className="mt-8 grid gap-8 lg:grid-cols-[minmax(0,1fr)_15rem]">
-          <div>
-            <h4 className="font-mono text-xs font-medium tracking-[0.08em] text-foreground uppercase">
-              Missions principales
-            </h4>
-
-            <ul className="mt-4 space-y-3">
-              {experience.responsibilities.map((responsibility) => (
-                <li
-                  key={responsibility}
-                  className="relative pl-5 text-sm leading-6 text-muted-foreground before:absolute before:top-[0.65rem] before:left-0 before:size-1.5 before:bg-primary"
-                >
-                  {responsibility}
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div>
-            <h4 className="font-mono text-xs font-medium tracking-[0.08em] text-foreground uppercase">
-              Environnement
-            </h4>
-
-            <ul
-              aria-label={`Environnement professionnel pour ${experience.role}`}
-              className="mt-4 flex flex-wrap gap-2"
+      <div className="mt-6 grid gap-8 lg:grid-cols-[minmax(0,1fr)_16rem]">
+        <ul className="space-y-2.5">
+          {experience.responsibilities.map((responsibility) => (
+            <li
+              key={responsibility}
+              className="relative pl-5 text-[0.9375rem] leading-6 text-foreground/85 before:absolute before:top-[0.7rem] before:left-0 before:h-px before:w-2.5 before:bg-primary"
             >
-              {experience.environment.map((item) => (
-                <li
-                  key={item}
-                  className="border border-border bg-muted/40 px-2.5 py-1 font-mono text-xs text-muted-foreground"
-                >
-                  {item}
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
+              {responsibility}
+            </li>
+          ))}
+        </ul>
+
+        <TechList
+          items={experience.environment}
+          label={`Technologies utilisées : ${experience.role}, ${experience.company}`}
+          className="content-start"
+        />
       </div>
     </article>
   );

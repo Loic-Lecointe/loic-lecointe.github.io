@@ -1,30 +1,7 @@
 export const navigationItems = [
-  {
-    href: "#accueil",
-    label: "Accueil",
-  },
-  {
-    href: "#projets",
-    label: "Projets",
-  },
-  {
-    href: "#experience",
-    label: "Expérience",
-  },
-  {
-    href: "#competences",
-    label: "Compétences",
-  },
-  {
-    href: "#formation",
-    label: "Formation",
-  },
-  {
-    href: "#a-propos",
-    label: "À propos",
-  },
-  {
-    href: "#contact",
-    label: "Contact",
-  },
+  { href: "#experience", label: "Expérience" },
+  { href: "#projets", label: "Projets" },
+  { href: "#competences", label: "Compétences" },
+  { href: "#parcours", label: "Parcours" },
+  { href: "#contact", label: "Contact" },
 ] as const;
