@@ -10,8 +10,8 @@ export function AboutSection() {
     >
       <div className="mx-auto grid max-w-6xl gap-8 px-4 py-20 sm:px-6 md:grid-cols-[12rem_1fr] lg:px-8 lg:py-28">
         <div>
-          <p className="font-mono text-sm font-medium text-primary">
-            05 · À propos
+          <p className="text-sm font-semibold text-primary md:sticky md:top-24">
+            À propos
           </p>
         </div>
 
@@ -37,24 +37,21 @@ export function AboutSection() {
           </div>
 
           <div className="mt-12">
-            <p className="font-mono text-xs font-medium tracking-[0.08em] text-foreground uppercase">
+            <p className="text-sm font-semibold text-foreground">
               Ma façon de travailler
             </p>
 
             <ul className="mt-5 grid gap-5 sm:grid-cols-2">
-              {aboutProfile.principles.map((principle, index) => (
+              {aboutProfile.principles.map((principle) => (
                 <li key={principle.id} className="h-full">
-                  <AboutPrincipleCard
-                    principle={principle}
-                    position={index + 1}
-                  />
+                  <AboutPrincipleCard principle={principle} />
                 </li>
               ))}
             </ul>
           </div>
 
           <div className="mt-12 grid gap-6 border-t border-border pt-8 lg:grid-cols-[12rem_1fr]">
-            <p className="font-mono text-xs font-medium tracking-[0.08em] text-foreground uppercase">
+            <p className="text-sm font-semibold text-foreground">
               Sujets d’intérêt
             </p>
 
@@ -65,7 +62,7 @@ export function AboutSection() {
               {aboutProfile.interests.map((interest) => (
                 <li
                   key={interest}
-                  className="border border-border bg-muted/40 px-3 py-1.5 font-mono text-xs text-muted-foreground"
+                  className="rounded-full border border-border bg-muted/40 px-3 py-1.5 font-mono text-xs text-muted-foreground"
                 >
                   {interest}
                 </li>

@@ -10,8 +10,8 @@ export function EducationSection() {
     >
       <div className="mx-auto grid max-w-6xl gap-8 px-4 py-20 sm:px-6 md:grid-cols-[12rem_1fr] lg:px-8 lg:py-28">
         <div>
-          <p className="font-mono text-sm font-medium text-primary">
-            04 · Formation
+          <p className="text-sm font-semibold text-primary md:sticky md:top-24">
+            Formation
           </p>
         </div>
 
@@ -33,9 +33,9 @@ export function EducationSection() {
           </div>
 
           <ol className="mt-12">
-            {educationEntries.map((education, index) => (
+            {educationEntries.map((education) => (
               <li key={education.id}>
-                <EducationItem education={education} position={index + 1} />
+                <EducationItem education={education} />
               </li>
             ))}
           </ol>

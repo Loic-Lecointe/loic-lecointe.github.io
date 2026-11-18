@@ -2,20 +2,15 @@ import type { Education } from "@/types/education";
 
 type EducationItemProps = {
   education: Education;
-  position: number;
 };
 
-export function EducationItem({ education, position }: EducationItemProps) {
+export function EducationItem({ education }: EducationItemProps) {
   return (
     <article className="grid gap-6 border-t border-border py-10 first:border-t-0 first:pt-0 md:grid-cols-[9rem_1fr]">
       <div>
-        <p className="font-mono text-xs font-medium text-primary">
-          {String(position).padStart(2, "0")}
-        </p>
-
         <p className="mt-2 text-sm text-muted-foreground">{education.period}</p>
 
-        <p className="mt-4 w-fit border border-border bg-muted/40 px-2.5 py-1 font-mono text-xs text-muted-foreground">
+        <p className="mt-4 w-fit rounded-full border border-border bg-muted/40 px-2.5 py-1 font-mono text-xs text-muted-foreground">
           {education.status}
         </p>
       </div>
@@ -48,7 +43,7 @@ export function EducationItem({ education, position }: EducationItemProps) {
         </p>
 
         <div className="mt-8">
-          <h4 className="font-mono text-xs font-medium tracking-[0.08em] text-foreground uppercase">
+          <h4 className="text-sm font-semibold text-foreground">
             Apports principaux
           </h4>
 
@@ -56,7 +51,7 @@ export function EducationItem({ education, position }: EducationItemProps) {
             {education.highlights.map((highlight) => (
               <li
                 key={highlight}
-                className="relative pl-5 text-sm leading-6 text-muted-foreground before:absolute before:top-[0.65rem] before:left-0 before:size-1.5 before:bg-primary"
+                className="relative pl-5 text-sm leading-6 text-muted-foreground before:absolute before:top-[0.65rem] before:left-0 before:size-1.5 before:rounded-full before:bg-primary"
               >
                 {highlight}
               </li>

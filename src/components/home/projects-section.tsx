@@ -10,8 +10,8 @@ export function ProjectsSection() {
     >
       <div className="mx-auto grid max-w-6xl gap-8 px-4 py-20 sm:px-6 md:grid-cols-[12rem_1fr] lg:px-8 lg:py-28">
         <div>
-          <p className="font-mono text-sm font-medium text-primary">
-            01 · Projets
+          <p className="text-sm font-semibold text-primary md:sticky md:top-24">
+            Projets
           </p>
         </div>
 
@@ -33,9 +33,9 @@ export function ProjectsSection() {
           </div>
 
           <ul className="mt-12 grid gap-5 lg:grid-cols-3">
-            {featuredProjects.map((project, index) => (
+            {featuredProjects.map((project) => (
               <li key={project.slug} className="h-full">
-                <ProjectCard project={project} position={index + 1} />
+                <ProjectCard project={project} />
               </li>
             ))}
           </ul>

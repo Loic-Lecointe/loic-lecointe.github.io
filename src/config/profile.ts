@@ -1,27 +1,29 @@
 export const profileConfig = {
-  role: "Développeur full-stack · R&D",
+  role: "Développeur full stack · R&D",
 
-  currentPosition: "Développeur R&D au sein de BFlex Techno / Baron Groupe",
+  currentPosition: "Développeur R&D en CDI chez BFlex Techno · Baron Groupe",
 
-  headline: "Je conçois des applications web et des logiciels métier robustes.",
+  headline:
+    "Je conçois des applications web et des logiciels industriels qui durent.",
 
   introduction:
-    "De l’analyse fonctionnelle au déploiement, je transforme des besoins concrets en solutions maintenables, testées et adaptées à leur environnement.",
+    "Du site vitrine animé à l’application WPF connectée à une base de données, je construis des outils fiables à partir de besoins concrets.",
 
   githubUrl: "https://github.com/Loic-Lecointe",
+  linkedinUrl: "" as string,
+  email: "loic.lecointe9@gmail.com",
+  location: "Saint-Omer (62), Hauts-de-France",
+  cvUrl: "/cv-loic-lecointe.pdf",
 
   highlights: [
     {
-      label: "Front-end",
-      value: "Next.js · React · TypeScript",
+      label: "Web et animations",
+      value: "Next.js · React · TypeScript · Three.js",
     },
     {
       label: "Back-end et données",
-      value: "Node.js · PostgreSQL · API",
+      value: "C#/.NET · Spring · PostgreSQL · MongoDB",
     },
-    {
-      label: "Qualité logicielle",
-      value: "Tests · CI/CD · Docker",
-    },
+    { label: "Industrie", value: "WPF · WinCC Unified · Agile / Jira" },
   ],
 } as const;

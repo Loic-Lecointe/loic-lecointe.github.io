@@ -2,6 +2,19 @@ import type { Education } from "@/types/education";
 
 export const educationEntries = [
   {
+    id: "bambu-lab-academy",
+    period: "2026",
+    degree: "Bambu Lab Academy — Bambu Lab H2D",
+    institution: "Bambu Lab Academy",
+    status: "Formation",
+    summary:
+      "Formation constructeur sur l’imprimante 3D Bambu Lab H2D, en prolongement de mon intérêt pour le prototypage et les outils de fabrication.",
+    highlights: [
+      "Prendre en main l’imprimante et son logiciel Bambu Studio.",
+      "Préparer et lancer des impressions pour prototyper des pièces.",
+    ],
+  },
+  {
     id: "but-informatique",
     period: "2021 — 2024",
     degree: "Bachelor universitaire de technologie en informatique",

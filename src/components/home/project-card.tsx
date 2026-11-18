@@ -4,17 +4,12 @@ import type { Project } from "@/types/project";
 
 type ProjectCardProps = {
   project: Project;
-  position: number;
 };
 
-export function ProjectCard({ project, position }: ProjectCardProps) {
+export function ProjectCard({ project }: ProjectCardProps) {
   return (
-    <article className="flex h-full flex-col border border-border bg-card p-6 transition-colors hover:border-primary/50">
+    <article className="flex h-full flex-col rounded-2xl border border-border bg-card p-6 transition-colors hover:border-primary/50">
       <div className="flex items-start justify-between gap-4">
-        <p className="font-mono text-xs font-medium text-primary">
-          {String(position).padStart(2, "0")}
-        </p>
-
         <p className="text-right text-xs leading-5 text-muted-foreground">
           {project.category}
         </p>
@@ -29,9 +24,7 @@ export function ProjectCard({ project, position }: ProjectCardProps) {
       </p>
 
       <div className="mt-6 border-l-2 border-primary/40 pl-4">
-        <p className="font-mono text-xs font-medium tracking-[0.08em] text-foreground uppercase">
-          Problématique
-        </p>
+        <p className="text-sm font-semibold text-foreground">Problématique</p>
 
         <p className="mt-2 text-sm leading-6 text-muted-foreground">
           {project.challenge}
@@ -45,7 +38,7 @@ export function ProjectCard({ project, position }: ProjectCardProps) {
         {project.technologies.map((technology) => (
           <li
             key={technology}
-            className="border border-border bg-muted/40 px-2.5 py-1 font-mono text-xs text-muted-foreground"
+            className="rounded-full border border-border bg-muted/40 px-2.5 py-1 font-mono text-xs text-muted-foreground"
           >
             {technology}
           </li>

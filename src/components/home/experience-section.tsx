@@ -10,8 +10,8 @@ export function ExperienceSection() {
     >
       <div className="mx-auto grid max-w-6xl gap-8 px-4 py-20 sm:px-6 md:grid-cols-[12rem_1fr] lg:px-8 lg:py-28">
         <div>
-          <p className="font-mono text-sm font-medium text-primary">
-            02 · Expérience
+          <p className="text-sm font-semibold text-primary md:sticky md:top-24">
+            Expérience
           </p>
         </div>
 
@@ -32,9 +32,9 @@ export function ExperienceSection() {
           </div>
 
           <ol className="mt-12">
-            {professionalExperiences.map((experience, index) => (
+            {professionalExperiences.map((experience) => (
               <li key={experience.id}>
-                <ExperienceItem experience={experience} position={index + 1} />
+                <ExperienceItem experience={experience} />
               </li>
             ))}
           </ol>

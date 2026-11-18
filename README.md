@@ -149,6 +149,6 @@ docs/migration/anciennes-routes.md
 
 ## État du projet
 
-La fondation Next.js, le design system, les thèmes clair et sombre, la CI et le premier déploiement Vercel sont opérationnels.
+Le portfolio est complet : accueil, projets, expériences, compétences, formation, à propos et contact. Le CV téléchargeable se trouve dans `public/cv-loic-lecointe.pdf` et doit être remplacé à chaque mise à jour.
 
-L’interface actuellement visible est encore une page provisoire. Les contenus définitifs, les pages de projets et les tests automatisés seront ajoutés progressivement.
+Les pages détaillées de projets et les tests automatisés seront ajoutés progressivement.

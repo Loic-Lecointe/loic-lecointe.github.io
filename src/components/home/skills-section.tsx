@@ -10,8 +10,8 @@ export function SkillsSection() {
     >
       <div className="mx-auto grid max-w-6xl gap-8 px-4 py-20 sm:px-6 md:grid-cols-[12rem_1fr] lg:px-8 lg:py-28">
         <div>
-          <p className="font-mono text-sm font-medium text-primary">
-            03 · Compétences
+          <p className="text-sm font-semibold text-primary md:sticky md:top-24">
+            Compétences
           </p>
         </div>
 
@@ -33,9 +33,9 @@ export function SkillsSection() {
           </div>
 
           <ul className="mt-12 grid gap-5 lg:grid-cols-2">
-            {skillGroups.map((skillGroup, index) => (
+            {skillGroups.map((skillGroup) => (
               <li key={skillGroup.id} className="h-full">
-                <SkillGroupCard skillGroup={skillGroup} position={index + 1} />
+                <SkillGroupCard skillGroup={skillGroup} />
               </li>
             ))}
           </ul>

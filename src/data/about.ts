@@ -5,6 +5,7 @@ export const aboutProfile = {
     "Ce qui m’intéresse dans le développement n’est pas seulement de faire fonctionner une fonctionnalité, mais de comprendre le problème qu’elle doit résoudre et de construire une solution qui restera compréhensible lorsqu’elle évoluera.",
     "Mon parcours entre applications web, logiciels métier et expérimentation m’a appris à m’adapter à des contextes différents tout en conservant les mêmes exigences de lisibilité, de validation et de maintenabilité.",
     "J’apprécie particulièrement les sujets où le logiciel répond à une problématique concrète, tout en gardant du temps pour explorer de nouvelles approches autour de l’automatisation, de l’intelligence artificielle et de projets personnels.",
+    "Hors écran : natation, musculation, basket, batterie en autodidacte et jeux vidéo (MMORPG, MOBA, FPS). Je parle français couramment et anglais (niveau B1).",
   ],
 
   principles: [
@@ -40,5 +41,7 @@ export const aboutProfile = {
     "Automatisation",
     "Intelligence artificielle",
     "Projets interactifs",
+    "Animations 3D web",
+    "Impression 3D",
   ],
 } satisfies AboutProfile;
