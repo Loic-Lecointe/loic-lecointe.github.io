@@ -10,7 +10,7 @@ export const profileConfig = {
     "Du site vitrine animé à l’application WPF connectée à une base de données, je construis des outils fiables à partir de besoins concrets.",
 
   githubUrl: "https://github.com/Loic-Lecointe",
-  linkedinUrl: "" as string,
+  linkedinUrl: "www.linkedin.com/in/loïc-lecointe-0bba70250",
   email: "loic.lecointe9@gmail.com",
   location: "Saint-Omer (62), Hauts-de-France",
   cvUrl: "/cv-loic-lecointe.pdf",
