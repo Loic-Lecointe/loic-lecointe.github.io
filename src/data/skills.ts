@@ -2,128 +2,64 @@ import type { SkillGroup } from "@/types/skill-group";
 
 export const skillGroups = [
   {
-    id: "interfaces-web",
-    title: "Interfaces web",
-    summary:
-      "Conception d’interfaces responsive, accessibles et structurées autour de composants réutilisables.",
-    applications: [
-      "Transformer une maquette ou un besoin fonctionnel en interface maintenable.",
-      "Organiser les composants et les données afin de limiter les duplications.",
-      "Adapter l’expérience aux usages clavier, mobile et desktop.",
-    ],
+    id: "web",
+    title: "Web et front-end",
+    summary: "Interfaces responsive, accessibles, construites en composants.",
     technologies: [
-      "Next.js",
       "React",
+      "Next.js",
       "TypeScript",
       "JavaScript",
+      "HTML / CSS",
       "Tailwind CSS",
-      "Three.js",
-      "GSAP",
-      "shadcn/ui",
     ],
   },
   {
-    id: "backend-echanges",
-    title: "Back-end et échanges",
+    id: "motion",
+    title: "Animation et 3D web",
     summary:
-      "Développement de logique applicative et de mécanismes de communication entre les différents composants d’un système.",
-    applications: [
-      "Concevoir des API adaptées aux besoins d’une application.",
-      "Structurer la logique métier indépendamment de l’interface.",
-      "Mettre en place des échanges en temps réel lorsque le contexte le nécessite.",
-    ],
-    technologies: [
-      "C# / .NET",
-      "Spring",
-      "JEE",
-      "Node.js",
-      "API REST",
-      "WebSockets",
-      "Zod",
-    ],
+      "Scènes WebGL et animations au scroll, sans sacrifier la performance.",
+    technologies: ["Three.js", "GSAP"],
   },
   {
-    id: "donnees-persistance",
-    title: "Données et persistance",
-    summary:
-      "Modélisation, stockage et interrogation de données en conservant leur cohérence et leur exploitabilité.",
-    applications: [
-      "Traduire les objets métier en modèles de données cohérents.",
-      "Écrire et optimiser des requêtes adaptées aux usages de l’application.",
-      "Faire évoluer les schémas sans compromettre les données existantes.",
-    ],
-    technologies: [
-      "SQL",
-      "PostgreSQL",
-      "MySQL",
-      "MongoDB",
-      "Prisma",
-      "Modélisation relationnelle",
-    ],
+    id: "backend",
+    title: "Back-end et validation",
+    summary: "Logique métier, API et validation des données.",
+    technologies: ["C# / .NET", "Spring", "JEE", "Node.js", "Zod"],
   },
   {
-    id: "logiciels-metier",
-    title: "Logiciels métier",
+    id: "desktop",
+    title: "Logiciel métier",
     summary:
-      "Conception et évolution d’applications répondant à des processus professionnels et industriels concrets.",
-    applications: [
-      "Analyser un besoin métier et identifier les contraintes fonctionnelles.",
-      "Faire évoluer une application existante sans dégrader sa stabilité.",
-      "Construire des interfaces desktop adaptées à des usages opérationnels.",
-    ],
+      "Applications desktop et interfaces opérateur en contexte industriel.",
     technologies: [
       "C#",
       "WPF",
       "XAML",
       "MVVM",
       "WinCC Unified",
-      "SQL",
-      "Applications desktop",
-      "Analyse fonctionnelle",
+      "Python",
+      "Java",
     ],
   },
   {
-    id: "qualite-livraison",
-    title: "Qualité et livraison",
-    summary:
-      "Mise en place de contrôles automatisés et de pratiques permettant de livrer des évolutions vérifiables.",
-    applications: [
-      "Automatiser le formatage, le lint, le typage, les audits et les builds.",
-      "Écrire des tests adaptés aux composants, aux parcours et à la logique métier.",
-      "Utiliser des branches, des revues et des déploiements de prévisualisation.",
-    ],
+    id: "data",
+    title: "Bases de données",
+    summary: "Modélisation relationnelle et documentaire.",
+    technologies: ["SQL", "PostgreSQL", "MySQL", "MongoDB", "Prisma"],
+  },
+  {
+    id: "tooling",
+    title: "Outils et méthode",
+    summary: "Versionnement, conteneurs et travail en équipe Agile.",
     technologies: [
-      "Vitest",
-      "Playwright",
       "Git",
       "GitHub",
-      "GitHub Actions",
       "GitLab",
       "Docker",
+      "Agile / Scrum",
+      "Jira",
+      "Notion",
     ],
-  },
-  {
-    id: "intelligence-artificielle",
-    title: "IA et optimisation",
-    summary:
-      "Expérimentation autour de problèmes d’optimisation nécessitant la conception d’environnements, de récompenses et de métriques.",
-    applications: [
-      "Formaliser un problème afin qu’il puisse être traité par un agent.",
-      "Concevoir une fonction de récompense cohérente avec l’objectif recherché.",
-      "Comparer les résultats à partir de métriques reproductibles.",
-    ],
-    technologies: ["Python", "Gymnasium", "Stable-Baselines3", "PPO"],
-  },
-  {
-    id: "methode-prototypage",
-    title: "Méthode et prototypage",
-    summary:
-      "Organisation du travail en équipe et passage rapide de l’idée à un prototype concret.",
-    applications: [
-      "Organiser un projet en méthode Agile avec des tickets Jira.",
-      "Définir les règles et la structure des dépôts GitHub d’une équipe.",
-      "Prototyper des pièces en impression 3D avec Bambu Studio.",
-    ],
-    technologies: ["Agile", "Scrum", "Jira", "Notion", "Miro", "Bambu Studio"],
   },
 ] satisfies readonly SkillGroup[];

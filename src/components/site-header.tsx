@@ -3,25 +3,17 @@ import Link from "next/link";
 import { MobileNavigation } from "@/components/mobile-navigation";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { navigationItems } from "@/config/navigation";
+import { profileConfig } from "@/config/profile";
 
 export function SiteHeader() {
   return (
-    <header className="sticky top-0 z-50 border-b border-border/80 bg-background/90 backdrop-blur-md supports-[backdrop-filter]:bg-background/75">
+    <header className="sticky top-0 z-50 border-b border-border/70 bg-background/80 backdrop-blur-md">
       <div className="relative mx-auto flex min-h-16 max-w-6xl items-center justify-between gap-4 px-4 sm:px-6 lg:px-8">
         <Link
           href="#accueil"
-          aria-label="Retour à l’accueil"
-          className="font-mono text-sm font-semibold tracking-[0.08em] focus-visible:ring-2 focus-visible:ring-ring/50 focus-visible:outline-none"
+          className="flex items-center gap-2.5 rounded-sm font-display text-base font-semibold tracking-tight [font-stretch:115%] focus-visible:ring-2 focus-visible:ring-ring/60 focus-visible:outline-none"
         >
-          <span className="text-primary">LL</span>
-
-          <span
-            aria-hidden="true"
-            className="hidden text-muted-foreground sm:inline"
-          >
-            {" "}
-            / Lecointe Loïc
-          </span>
+          {profileConfig.name}
         </Link>
 
         <nav aria-label="Navigation principale" className="hidden lg:block">
@@ -30,7 +22,7 @@ export function SiteHeader() {
               <li key={item.href}>
                 <Link
                   href={item.href}
-                  className="inline-flex min-h-9 items-center px-3 text-sm font-medium text-muted-foreground transition-colors hover:text-foreground focus-visible:ring-2 focus-visible:ring-ring/50 focus-visible:outline-none"
+                  className="inline-flex min-h-9 items-center rounded-md px-3 text-sm text-muted-foreground transition-colors hover:text-foreground focus-visible:ring-2 focus-visible:ring-ring/60 focus-visible:outline-none"
                 >
                   {item.label}
                 </Link>
@@ -40,6 +32,12 @@ export function SiteHeader() {
         </nav>
 
         <div className="flex items-center gap-2">
+          <a
+            href={`mailto:${profileConfig.email}`}
+            className="hidden min-h-9 items-center rounded-md bg-primary px-4 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90 focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background focus-visible:outline-none sm:inline-flex"
+          >
+            Me contacter
+          </a>
           <ThemeToggle />
           <MobileNavigation />
         </div>

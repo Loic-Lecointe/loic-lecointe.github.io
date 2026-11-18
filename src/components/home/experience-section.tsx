@@ -1,4 +1,6 @@
 import { ExperienceItem } from "@/components/home/experience-item";
+import { SectionHeading } from "@/components/home/section-heading";
+import { TimelineRail } from "@/components/home/timeline-rail";
 import { professionalExperiences } from "@/data/experiences";
 
 export function ExperienceSection() {
@@ -6,48 +8,28 @@ export function ExperienceSection() {
     <section
       id="experience"
       aria-labelledby="experience-title"
-      className="scroll-mt-20 border-b border-border"
+      className="scroll-mt-16 border-b border-border"
     >
-      <div className="mx-auto grid max-w-6xl gap-8 px-4 py-20 sm:px-6 md:grid-cols-[12rem_1fr] lg:px-8 lg:py-28">
-        <div>
-          <p className="text-sm font-semibold text-primary md:sticky md:top-24">
-            Expérience
-          </p>
-        </div>
+      <div className="mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
+        <SectionHeading
+          id="experience-title"
+          title="Trois ans en R&D industrielle"
+        >
+          Du stage au CDI chez BFlex Techno (Baron Groupe) : des applications
+          web, des logiciels de production et des interfaces opérateur, livrés à
+          des équipes qui s’en servent tous les jours.
+        </SectionHeading>
 
-        <div>
-          <div className="max-w-3xl">
-            <h2
-              id="experience-title"
-              className="text-3xl leading-tight font-semibold tracking-tight text-balance sm:text-4xl"
-            >
-              Concevoir des solutions adaptées à des besoins métier concrets.
-            </h2>
-
-            <p className="mt-5 text-base leading-7 text-muted-foreground sm:text-lg">
-              Mon expérience professionnelle associe analyse fonctionnelle,
-              développement applicatif, maintenance et amélioration continue de
-              logiciels utilisés dans des contextes exigeants.
-            </p>
-          </div>
-
-          <ol className="mt-12">
-            {professionalExperiences.map((experience) => (
-              <li key={experience.id}>
-                <ExperienceItem experience={experience} />
-              </li>
-            ))}
-          </ol>
-
-          <p
-            role="note"
-            className="mt-10 border-l-2 border-primary/50 pl-4 text-sm leading-6 text-muted-foreground"
-          >
-            Certains projets professionnels sont soumis à des obligations de
-            confidentialité. Les informations présentées ici décrivent les
-            responsabilités et les pratiques sans exposer de données, de clients
-            ou de systèmes internes.
-          </p>
+        <div className="mt-14">
+          <TimelineRail>
+            <ol>
+              {professionalExperiences.map((experience) => (
+                <li key={experience.id} className="last:[&>article]:pb-0">
+                  <ExperienceItem experience={experience} />
+                </li>
+              ))}
+            </ol>
+          </TimelineRail>
         </div>
       </div>
     </section>

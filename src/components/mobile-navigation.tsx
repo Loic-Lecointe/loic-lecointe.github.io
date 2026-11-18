@@ -47,7 +47,7 @@ export function MobileNavigation() {
             ? "Fermer le menu de navigation"
             : "Ouvrir le menu de navigation"
         }
-        className="inline-flex size-9 items-center justify-center border border-border bg-background text-foreground transition-colors hover:bg-muted focus-visible:border-ring focus-visible:ring-2 focus-visible:ring-ring/50 focus-visible:outline-none"
+        className="inline-flex size-9 items-center justify-center rounded-md border border-border bg-background text-foreground transition-colors hover:bg-muted focus-visible:border-ring focus-visible:ring-2 focus-visible:ring-ring/50 focus-visible:outline-none"
         onClick={() => {
           setIsOpen((currentValue) => !currentValue);
         }}
@@ -70,7 +70,7 @@ export function MobileNavigation() {
               <li key={item.href}>
                 <Link
                   href={item.href}
-                  className="block border border-transparent px-3 py-3 text-sm font-medium text-foreground transition-colors hover:border-border hover:bg-muted focus-visible:border-ring focus-visible:ring-2 focus-visible:ring-ring/50 focus-visible:outline-none"
+                  className="block rounded-md border border-transparent px-3 py-3 text-sm font-medium text-foreground transition-colors hover:border-border hover:bg-muted focus-visible:border-ring focus-visible:ring-2 focus-visible:ring-ring/50 focus-visible:outline-none"
                   onClick={closeNavigation}
                 >
                   {item.label}

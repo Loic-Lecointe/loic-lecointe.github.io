@@ -18,6 +18,9 @@ Refonte du portfolio professionnel de Loïc Lecointe, développeur full-stack et
 - Tailwind CSS ;
 - shadcn/ui avec Base UI ;
 - next-themes ;
+- Three.js (scène 3D du hero) ;
+- GSAP + ScrollTrigger (frise d’expérience) ;
+- `next/og` (image Open Graph générée) et données structurées JSON-LD ;
 - GitHub Actions ;
 - Vercel.
 

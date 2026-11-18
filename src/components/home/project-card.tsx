@@ -1,5 +1,4 @@
-import { ArrowUpRightIcon } from "@phosphor-icons/react/ssr";
-
+import { TechList } from "@/components/home/tech-list";
 import type { Project } from "@/types/project";
 
 type ProjectCardProps = {
@@ -7,55 +6,51 @@ type ProjectCardProps = {
 };
 
 export function ProjectCard({ project }: ProjectCardProps) {
+  const isProfessional = project.context === "Professionnel";
+
   return (
-    <article className="flex h-full flex-col rounded-2xl border border-border bg-card p-6 transition-colors hover:border-primary/50">
-      <div className="flex items-start justify-between gap-4">
-        <p className="text-right text-xs leading-5 text-muted-foreground">
+    <article className="grid gap-6 py-10 md:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] md:gap-12">
+      <div>
+        <p className="flex flex-wrap items-center gap-2 text-sm text-muted-foreground">
+          <span
+            className={
+              isProfessional
+                ? "rounded-sm bg-primary/15 px-2 py-0.5 text-xs font-medium text-primary"
+                : "rounded-sm border border-border px-2 py-0.5 text-xs font-medium text-muted-foreground"
+            }
+          >
+            {project.context}
+          </span>
           {project.category}
         </p>
+        <h3 className="mt-4 text-2xl leading-tight font-semibold text-balance sm:text-[1.75rem]">
+          {project.title}
+        </h3>
       </div>
 
-      <h3 className="mt-6 text-2xl leading-tight font-semibold tracking-tight text-balance">
-        {project.title}
-      </h3>
-
-      <p className="mt-4 flex-1 text-sm leading-6 text-muted-foreground">
-        {project.summary}
-      </p>
-
-      <div className="mt-6 border-l-2 border-primary/40 pl-4">
-        <p className="text-sm font-semibold text-foreground">Problématique</p>
-
-        <p className="mt-2 text-sm leading-6 text-muted-foreground">
-          {project.challenge}
+      <div>
+        <p className="text-base leading-7 text-foreground/85">
+          {project.summary}
         </p>
-      </div>
 
-      <ul
-        aria-label={`Technologies utilisées pour ${project.title}`}
-        className="mt-6 flex flex-wrap gap-2"
-      >
-        {project.technologies.map((technology) => (
-          <li
-            key={technology}
-            className="rounded-full border border-border bg-muted/40 px-2.5 py-1 font-mono text-xs text-muted-foreground"
-          >
-            {technology}
-          </li>
-        ))}
-      </ul>
+        <dl className="mt-5 space-y-3 text-[0.9375rem] leading-6">
+          <div>
+            <dt className="font-medium text-foreground">Le défi</dt>
+            <dd className="text-muted-foreground">{project.challenge}</dd>
+          </div>
+          {project.outcome ? (
+            <div>
+              <dt className="font-medium text-foreground">Mon rôle</dt>
+              <dd className="text-muted-foreground">{project.outcome}</dd>
+            </div>
+          ) : null}
+        </dl>
 
-      <div className="mt-8 flex items-center justify-between gap-4 border-t border-border pt-5">
-        <p className="text-xs text-muted-foreground">Étude de cas à venir</p>
-
-        <a
-          href="#contact"
-          aria-label={`Échanger au sujet du projet ${project.title}`}
-          className="inline-flex min-h-10 items-center gap-2 text-sm font-medium text-foreground transition-colors hover:text-primary focus-visible:ring-2 focus-visible:ring-ring/50 focus-visible:outline-none"
-        >
-          Échanger
-          <ArrowUpRightIcon aria-hidden="true" className="size-4" />
-        </a>
+        <TechList
+          items={project.technologies}
+          label={`Technologies du projet ${project.title}`}
+          className="mt-6"
+        />
       </div>
     </article>
   );
